@@ -53,7 +53,6 @@ Run:
 
 ```bash
 python3 tests/validate_port.py
-env PYTHONPATH=/tmp/codex-pyyaml bash -lc 'for d in skills/*; do python3 /Users/arcmac/.codex/skills/.system/skill-creator/scripts/quick_validate.py "$d" || exit 1; done'
 ```
 
 The tests check:
