@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Real Engineer Skills"
+  short_description: "Configure real-engineer context"
+  default_prompt: "Use $setup-real-engineer-skills to configure this repo for the real-engineer skill set."

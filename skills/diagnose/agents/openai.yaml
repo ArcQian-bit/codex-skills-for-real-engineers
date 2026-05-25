@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose"
+  short_description: "Disciplined debugging workflow"
+  default_prompt: "Use $diagnose to debug this failure with a reproducible feedback loop."

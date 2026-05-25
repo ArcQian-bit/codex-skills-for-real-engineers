@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Codebase Architecture"
+  short_description: "Codebase architecture review"
+  default_prompt: "Use $improve-codebase-architecture to find deepening opportunities in this repo."

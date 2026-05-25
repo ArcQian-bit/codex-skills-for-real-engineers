@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grill with Docs"
+  short_description: "Domain-aware plan clarification"
+  default_prompt: "Use $grill-with-docs to clarify this plan against the repo domain docs."

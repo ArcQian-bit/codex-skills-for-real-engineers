@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zoom Out"
+  short_description: "System-context code mapping"
+  default_prompt: "Use $zoom-out to explain how this code fits into the larger system."

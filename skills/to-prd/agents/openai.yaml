@@ -1,0 +1,4 @@
+interface:
+  display_name: "To PRD"
+  short_description: "PRD drafting from context"
+  default_prompt: "Use $to-prd to turn the current context into a PRD issue."

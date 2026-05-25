@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Continuation briefs for agents"
+  default_prompt: "Use $handoff to write a concise continuation brief for a fresh agent."
