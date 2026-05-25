@@ -3,12 +3,17 @@
 [![GitHub stars](https://img.shields.io/github/stars/ArcQian-bit/codex-skills-for-real-engineers?style=social)](https://github.com/ArcQian-bit/codex-skills-for-real-engineers/stargazers)
 [![Source](https://img.shields.io/badge/source-mattpocock%2Fskills-blue)](https://github.com/mattpocock/skills)
 
-A Codex port of Matt Pocock's **Skills For Real Engineers**. The goal is a function-complete migration of the public upstream plugin skill set into native Codex skill folders, with Codex project setup, GitHub connector guidance, and `agents/openai.yaml` metadata.
+A Codex port of Matt Pocock's **Skills For Real Engineers**. The goal is a
+function-complete migration of the public upstream plugin skill set into native
+Codex skill folders, with Codex project setup, GitHub connector guidance, and
+`agents/openai.yaml` metadata.
 
 This is an independent Codex adaptation, not the upstream official repository.
 Upstream source: https://github.com/mattpocock/skills
 
 ## Quick Install
+
+Install all 14 Codex skills:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ArcQian-bit/codex-skills-for-real-engineers/main/install.sh | bash
@@ -19,6 +24,12 @@ Install selected skills:
 ```bash
 CODEX_REAL_ENGINEER_SKILLS=tdd,diagnose,grill-with-docs \
   curl -fsSL https://raw.githubusercontent.com/ArcQian-bit/codex-skills-for-real-engineers/main/install.sh | bash
+```
+
+Install from a local checkout:
+
+```bash
+CODEX_REAL_ENGINEER_SOURCE_DIR="$PWD" ./install.sh
 ```
 
 Restart Codex after installation so the new skills are discovered.
@@ -51,12 +62,25 @@ Restart Codex after installation so the new skills are discovered.
 - Made multi-agent architecture exploration optional: use Codex multi-agent tools when available, otherwise perform independent passes directly.
 - Added `agents/openai.yaml` metadata for every skill.
 
+## Coverage Audit
+
+See [PORTING-AUDIT.md](PORTING-AUDIT.md) for the migration checklist. The test
+suite verifies that all 14 upstream public plugin skills are present, required
+support files are included, Codex frontmatter is valid, and local skill links
+resolve.
+
 ## Verify
 
 ```bash
-true
+python3 tests/validate_port.py
 ```
 
 ## Attribution
 
-This repository adapts MIT-licensed work from Matt Pocock's [`mattpocock/skills`](https://github.com/mattpocock/skills), "Skills For Real Engineers. Straight from my .claude directory."
+This repository adapts MIT-licensed work from Matt Pocock's
+[`mattpocock/skills`](https://github.com/mattpocock/skills), "Skills For Real
+Engineers. Straight from my .claude directory."
+
+The upstream repository remains the canonical source for Matt's original
+skills. This repository exists to make that public skill set easier to install
+and use in Codex.
